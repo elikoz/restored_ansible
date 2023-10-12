@@ -1,0 +1,17 @@
+#      bot_token = '5448956724:AAGlSsHJiSLBxmbf9OoU4eHcgftm7v79QmM'
+#     bot_chatID = '-1001620921902'
+
+
+- hosts: all
+  tasks:
+    - name: Установка python-telegram-bot
+      pip:
+        name: python-telegram-bot
+        state: present
+      become: yes
+
+    - name: Отправка уведомления в Telegram
+      telegram:
+        token: 5448956724:AAGlSsHJiSLBxmbf9OoU4eHcgftm7v79QmM
+        chat_id: -1001620921902
+        msg: "Привет, это уведомление из Ansible!"

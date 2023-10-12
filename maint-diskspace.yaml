@@ -20,4 +20,4 @@
           text: "Привет, это уведомление из Ansible!"
           parse_mode: "markdown"
         token: "{{ telegram_token }}"
-      when: disk_usage.stdout[:-1]|int > 80 
+      when: disk_usage.stdout[:-1]|int < 80 

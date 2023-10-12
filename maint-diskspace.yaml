@@ -8,3 +8,6 @@
     - name: check disk space available
       shell: df -h / | awk 'NR==2 {print $5}'
       register: disk_usage
+    - name: print disk usage
+      debug:
+        msg: {{ disk_usage.stdout }}

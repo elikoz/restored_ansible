@@ -10,4 +10,4 @@
       register: disk_usage
     - name: print disk usage
       debug:
-        msg: {{ disk_usage.stdout }}
+        msg: "Disk usage: {{ disk_usage.stdout }}"

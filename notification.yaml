@@ -14,8 +14,7 @@
       telegram:
         api_method: sendMessage
         api_args:
-          chat_id: -1001620921902
+          chat_id: "{{ chat_id }}"
           text: "Привет, это уведомление из Ansible!"
           parse_mode: "markdown"
-            #token: '5448956724:AAGlSsHJiSLBxmbf9OoU4eHcgftm7v79QmM'
         token: "{{ telegram_token }}"
